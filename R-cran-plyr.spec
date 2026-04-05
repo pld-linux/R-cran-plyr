@@ -1,14 +1,15 @@
 %define		fversion	%(echo %{version} |tr r -)
 %define		modulename	plyr
+%undefine	_debugsource_packages
 Summary:	Tools for splitting, applying and combining data
 Name:		R-cran-%{modulename}
 Version:	1.8
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		Applications/Math
-Source0:	ftp://stat.ethz.ch/R-CRAN/src/contrib/%{modulename}_%{fversion}.tar.gz
+Source0:	https://cran.r-project.org/src/contrib/%{modulename}_%{fversion}.tar.gz
 # Source0-md5:	e1c1d2f0c47fd16b2cef6ec9c2e5883c
-URL:		http://cran.fhcrc.org/web/packages/plyr/index.html
+URL:		https://cran.r-project.org/web/packages/plyr/index.html
 BuildRequires:	R >= 2.8.1
 Requires(post,postun):	R >= 2.8.1
 Requires(post,postun):	perl-base
